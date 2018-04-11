@@ -1,0 +1,353 @@
+/* Universal Styles */
+
+html {
+  font-size: 16px;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+  background-color: white;
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}
+
+.grid-container {
+	display: grid;
+}
+
+/* Navigation */
+
+nav {
+ 	grid-template: auto / 80% 20%;
+	color: gray;
+}
+
+nav div {
+	align-self: center;
+}
+
+nav ul  {
+     grid-template: auto / 1fr 1fr 1fr 1fr 4fr;
+     grid-gap: 0 0.5rem;
+}
+
+nav ul li {
+	list-style: none;
+}
+
+nav a {
+	text-decoration: none;
+	color: gray;
+	padding: 0.5rem;
+}
+
+nav a:hover {
+	background-color: lightgray;
+}
+
+
+/* Navigation - Brand  */
+
+nav img {
+	width:  50px;
+	height: 70px;
+}
+
+
+/* Media Query - Navigation */
+@media only screen and (max-width: 768px) {
+
+	nav img {
+		display: none;
+	}
+
+	nav ul  {
+     grid-template: 1fr 1fr 1fr 1fr / 1fr;
+	}
+
+	nav ul li {
+	 	justify-self: center;
+	 	padding: 0.3rem 0;
+	}
+}
+
+/* Button */
+
+.btn-primary {
+  width: 11.4rem;
+  padding: 1.3rem 0;
+  border: 0;
+  font-size: 1.5rem;
+  text-shadow: none;
+  box-shadow: 0 0 3px rgba(0,0,0,0.5);
+  background-color: black;
+  transition: .5s box-shadow;
+}
+
+.btn-primary:hover{
+    background-color: black;
+    box-shadow: 0 0 12px rgba(0,0,0,0.9);
+}
+
+.btn-primary:active{
+   box-shadow: 0 0 0 rgba(0,0,0,0.5);
+}
+
+.btn-primary a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* Header - Banner */
+
+header {
+  grid-template: auto / 100%;
+  height: 30rem;
+  padding: 5rem 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  /* filter: sepia(30%); */
+
+  /* blur()
+brightness()
+contrast()
+drop-shadow()
+grayscale()
+hue-rotate()
+invert()
+opacity()
+saturate()
+sepia() */
+
+}
+
+.background-panel-1 {
+  background-image: url("../images/chagall-window.jpg");
+}
+
+header div {
+  align-self: center;
+  text-align: center;
+  justify-self: center;
+}
+
+header .title {
+  width: 75%;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 4.75rem;
+  text-shadow: 2px 2px #000000;
+}
+
+header  p {
+  font-size: 1.5rem;
+}
+
+/* Header Media Query  */
+@media only screen and (max-width: 767px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* Project Image Containers */
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  opacity: 0.7;
+  transition: transform .5s,
+              opacity .5s;
+  transition: transform .5s,
+              opacity .5s;
+}
+
+.image-container img:hover{
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+
+/* Main Content - Featured Project  */
+
+.featured-project {
+ 	grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas:
+  "image description categories";
+ 	grid-gap: 1rem 2rem;
+  margin: 1rem 2rem;
+}
+
+.featured-proj-img {
+  grid-area: image;
+}
+
+.featured-project .image-container {
+  height: 20rem;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.featured-proj {
+  grid-area: description;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+}
+
+.categories {
+  grid-area: categories;
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+}
+
+.categories h3 {
+  color: #399bd1;
+}
+
+.categories ul {
+    color: rgba(0, 0, 0, 0.7);
+    list-style-type: none;
+    margin-left: -2.25rem;
+}
+
+/* Featured Projects Media Query  */
+@media only screen and (max-width: 992px) {
+  .featured-project {
+   		grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "image image"
+      "description categories";
+  }
+
+  .featured-proj, .categories {
+      margin-top: 0rem;
+  }
+}
+
+/* Process / How It Works - Additional Content */
+.process-header {
+  margin: 1rem 2rem;
+}
+
+.process {
+  margin-bottom: 5.85rem;
+}
+
+.process-1 {
+  grid-area: process-1
+}
+
+.process-2 {
+  grid-area: process-2
+}
+
+.process-3 {
+  grid-area: process-3
+}
+
+.processes {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-areas:
+  "process-1 process-2 process-3";
+ 	grid-gap: 0 1rem;
+  margin: 1rem 2rem;
+}
+
+.process .image-container {
+  height: 13.5rem;
+  overflow: hidden;
+}
+
+/* Projects Media Query  */
+@media only screen and (max-width: 767px) {
+  .processes {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "proj1"
+      "proj2"
+      "proj3";
+  }
+
+  .process {
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* Footer */
+footer strong {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+footer p {
+  max-width: 42rem;
+  margin: auto;
+}
+
+footer {
+  grid-template: 1fr 1fr 1fr / 100%;
+  grid-gap: 1rem 0;
+  padding: 5.2rem 2rem;
+  background-color: #f3f3f3;
+  text-align: center;
+  align-items: center;
+}
+
+footer a {
+  justify-self: center;
+  text-decoration: none;
+  color: white;
+}
+
+/* Footer Media Query  */
+@media only screen and (max-width: 767px) {
+
+  footer strong {
+    margin-bottom: 0rem;
+    font-size: 2rem;
+  }
+
+  footer {
+    padding: 1rem 2rem;
+    grid-gap: 0;
+  }
+}
