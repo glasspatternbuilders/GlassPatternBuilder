@@ -1,6 +1,6 @@
 # GlassPatternBuilder
 
-** GlassPatternBuilder ** is an software application that allows a user to upload, modify and resize [and print?] stained glass patterns.   
+** GlassPatternBuilder ** is a software application that allows a user to upload, modify and resize [and print?] stained glass patterns.   
 
 ## User Stories
 
