@@ -1,6 +1,6 @@
-# GPBv1 - *Glass Pattern Builders*
+# GlassPatternBuilder
 
-**[Name of our app/tool]** is an software application that allows a user to upload, modify and resize [and print?] stained glass patterns.   
+** GlassPatternBuilder ** is a software application that allows a user to upload, modify and resize [and print?] stained glass patterns.   
 
 ## User Stories
 
@@ -57,3 +57,4 @@ A "pattern" refers to the entire work, and it is comprised of many "pieces".
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+
