@@ -34,23 +34,32 @@
 
     <!-- Drop Area for Uploading Images  -->
 
-    <div id="drop-area">
-
+<div id="drop-area">
     <form class="my-form">
         <h2>Drag and drop (or upload) your files below!</h2>
         <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
         <label class="button" for="fileElem">Select some files</label>
     </form>
 
-
     <div id="gallery"></div>
 
 </div>
 
+    <!-- Library of Images already handled by Potrace and Numbered  -->
 
-
-
-
+    <div id="library">
+        <form class="my-form">
+            <h2>Or select patterns from the library below</h2>
+              <img src="./resources/svg-patterns/bird.svg" alt="Bird">
+              <img src="./resources/svg-patterns/butterfly.svg" alt="Butterfly">
+              <img src="./resources/svg-patterns/dolphin.svg" alt="Dolphin">
+              <img src="./resources/svg-patterns/dragonfly-from-png.svg" alt="Dragonfly">
+              <img src="./resources/svg-patterns/dragonfly-from-potrace.svg" alt="Dragonfly">
+              <img src="./resources/svg-patterns/dragonfly-split-paths-js.svg" alt="Dragonfly">
+              <img src="./resources/svg-patterns/geometric.svg" alt="Geometric">
+              <img src="./resources/svg-patterns/lighthouse.svg" alt="Lighthouse">
+        </form>
+    </div>
 
       <script src="./resources/js/upload.js"></script>
 

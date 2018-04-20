@@ -255,6 +255,14 @@ header  p {
     margin-left: -2.25rem;
 }
 
+.categories a {
+  text-decoration: none;
+}
+
+.categories:hover {
+  background-color: lightcyan;  /* just for testing - update style */
+}
+
 /* Featured Projects Media Query  */
 @media only screen and (max-width: 992px) {
   .featured-project {
