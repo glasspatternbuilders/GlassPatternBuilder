@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Rammetto+One|Roboto:300,400" rel="stylesheet">
     <link href="style.css" type="text/css" rel="stylesheet">
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+    <link href="./resources/css/upload.css" type="text/css" rel="stylesheet">
 
   </head>
   <body>
@@ -31,6 +32,27 @@
         <div><img src="../logo/home.png"></div>
     </nav>
 
-    <h1>Make Pattern Here</h1>
+    <!-- Drop Area for Uploading Images  -->
+
+    <div id="drop-area">
+
+    <form class="my-form">
+        <h2>Drag and drop (or upload) your files below!</h2>
+        <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+        <label class="button" for="fileElem">Select some files</label>
+    </form>
+
+
+    <div id="gallery"></div>
+
+</div>
+
+
+
+
+
+
+      <script src="./resources/js/upload.js"></script>
+
   </body>
 </html>

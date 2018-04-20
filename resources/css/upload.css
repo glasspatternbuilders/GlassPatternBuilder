@@ -1,0 +1,46 @@
+#drop-area {
+    background-color: lightcyan;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 500px;
+    font-family: sans-serif;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+
+#drop-area.highlight {
+    border-color: purple;
+}
+p {
+    margin-top: 20px;
+}
+
+.my-form {
+    margin-bottom: 10px;
+}
+#gallery {
+    margin-top: 10px;
+}
+#gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.button {
+    display: inline-block;
+    margin-top: 20px; 
+    padding: 10px;
+    background: linen;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.button:hover {
+    background: #ddd;
+}
+#fileElem {
+    display: none;
+}
