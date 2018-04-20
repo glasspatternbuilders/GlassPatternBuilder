@@ -6,7 +6,7 @@
 
 The following **required** functionality is completed:
 
-* [ ] User can upload a black and white pattern in bmp format.
+* [X] User can upload a black and white pattern in bmp format.
 * [ ] The software application displays the uploaded pattern, which is in svg form and contains automatic numbering and arrows for each piece.  
 * [ ] User can select a piece.
 * [ ] User can apply color fill to a piece.
@@ -18,7 +18,7 @@ The following **optional** features are implemented:
 
 * [ ] If user tries to upload an improper file format, an alert is prompted to the user. 
 * [ ] User can upload an image including color and of various formats (png, jpg)
-* [ ] User can select a pattern form a library. 
+* [X] User can select a pattern form a library. 
 * [ ] User can apply texture fill to a piece. 
 * [ ] User can send the pattern to be printed and cut (e.g. 3D laser printer) 
 
