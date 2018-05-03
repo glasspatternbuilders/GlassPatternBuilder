@@ -59,18 +59,29 @@ function previewFile(file) {
 }
 
 function uploadFile(file) {
-    let url = 'YOUR URL HERE'
+
+    let url = 'http://localhost:8080/home';
     let formData = new FormData()
 
     formData.append('file', file)
+    console.log("File is appended to FormData");
 
     fetch(url, {
         method: 'POST',
+        mode: 'no-cors',
         body: formData
     })
-        .then(() => { /* Done. Inform the user */ })
-        .catch(() => { /* Error. Inform the user */ })
+        .then(() => {
+            /* Done. Inform the user */
+            console.log("File sent to server");
+        })
+
+        .catch(() => { /* Error. Inform the user */
+            console.log("ERROR: File was not sent to sever");
+        })
 }
+
+
 
 
 

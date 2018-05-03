@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/glasspatternbuilders/GlassPatternBuilder/issues"
   },
-  "homepage": "https://github.com/glasspatternbuilders/GlassPatternBuilder#readme"
+  "homepage": "https://github.com/glasspatternbuilders/GlassPatternBuilder#readme",
+  "dependencies": {
+    "formidable": "^1.2.1",
+    "fs-extra": "^6.0.0",
+    "shelljs": "^0.8.1",
+    "util": "^0.10.3"
+  }
 }
