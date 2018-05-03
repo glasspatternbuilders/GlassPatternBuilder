@@ -40,9 +40,9 @@ http.createServer(function (req, res)  {
 
 //TODO implement function for sending multiple files to potrace
 
-//TODO add ID markup language to each retrieved svg
+//TODO add ID markup language to each retrieved svg - entire pattern
 
-//TODO add the other markup language needed in the SVG
+//TODO add the other markup language needed in the SVG - individual pieces
 
 //TODO place the marked up items in the proper folder
 
