@@ -37,3 +37,47 @@ http.createServer(function (req, res)  {
         return;
     }
 }).listen(8080);
+
+//TODO implement function for sending multiple files to potrace
+
+//TODO add ID markup language to each retrieved svg
+
+//TODO add the other markup language needed in the SVG
+
+//TODO place the marked up items in the proper folder
+
+
+
+function readFile() {
+    let filePath = './resources/tests/dolphin.svg';
+    fs.readFile(filePath,"utf-8",function(err,contents){
+        if (err) error(err);
+        else {
+            processFile(contents);
+        }
+    });
+}
+
+function processFile(text) {
+
+
+    text = text.toUpperCase();
+
+
+    process.stdout.write(text);
+
+}
+
+function readLine() {
+    var myInterface = readline.createInterface({
+        input: fs.createReadStream('./resources/tests/dolphin.svg')
+    });
+
+    var lineno = 0;
+    myInterface.on('line', function (line) {
+        if(line.startsWith("<path")){
+            console.log('Line number ' + lineno + ': ' + line);
+        }
+        lineno++;
+    });
+}
