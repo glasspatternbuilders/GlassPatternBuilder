@@ -53,6 +53,8 @@ function previewFile(file) {
         let img = document.createElement('img')
         img.src = reader.result
         document.getElementById('gallery').appendChild(img)
+        img.id = "img-"+file.name;
+        sample.setAttributeNode(id);
     }
 }
 
