@@ -1,0 +1,19 @@
+{
+  "name": "glasspatternbuilders",
+  "version": "1.0.0",
+  "description": "** GlassPatternBuilder ** is a software application that allows a user to upload, modify and resize [and print?] stained glass patterns.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glasspatternbuilders/GlassPatternBuilder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glasspatternbuilders/GlassPatternBuilder/issues"
+  },
+  "homepage": "https://github.com/glasspatternbuilders/GlassPatternBuilder#readme"
+}
