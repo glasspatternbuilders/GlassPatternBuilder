@@ -1,0 +1,1 @@
+This is the folder where the svg's file will be stored after they are returned from Potrace.
