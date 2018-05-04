@@ -59,8 +59,8 @@
         <entry file="file://$PROJECT_DIR$/node_modules/balanced-match/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="310">
-                <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <first_editor relative-caret-position="87">
+                <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
               </first_editor>
               <second_editor />
             </state>
@@ -210,12 +210,12 @@
       <workItem from="1525464118050" duration="776000" />
       <workItem from="1525465191220" duration="2309000" />
       <workItem from="1525467575040" duration="14000" />
-      <workItem from="1525467605626" duration="475000" />
+      <workItem from="1525467605626" duration="599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31101000" />
+    <option name="totallyTimeSpent" value="31225000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,9 +234,9 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329429" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29575402" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29575402" />
       <window_info anchor="right" id="FAQ Robot" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29286927" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29286927" />
       <window_info id="Project Explorer" order="2" />
       <window_info id="Job Explorer" order="2" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -628,8 +628,8 @@
     <entry file="file://$PROJECT_DIR$/node_modules/balanced-match/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="310">
-            <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <first_editor relative-caret-position="87">
+            <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
           </first_editor>
           <second_editor />
         </state>
