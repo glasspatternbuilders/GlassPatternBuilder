@@ -101,6 +101,9 @@ function addIdToSvg(inputPath, filename){
 
 
 
+// Function that adds an ID Field to the individual paths in the SVG.
+// Other fields may be added
+
 function modifySVGPath(inputPath, filename) {
     var fullPath = inputPath;
     var dirname = RETURNED_SVG_PATH;
@@ -120,21 +123,20 @@ function modifySVGPath(inputPath, filename) {
             output.write(toWrite)
         }
         else if(line.startsWith("<path")){
-          console.log('Line number ' + pathnumber + ': ' + line);
-          var lineToEdit = line.split(' ');
-          console.log(lineToEdit[0]);
 
-          lineToEdit.splice(1, 0, 'id="' + pathnumber + '"');
-          var editedLine = lineToEdit.join(' ');
-          console.log(editedLine);
-          pathnumber++;
+            var lineToEdit = line.split(' ');
+            lineToEdit.splice(1, 0, 'id="' + pathnumber + '"');
+            var editedLine = lineToEdit.join(' ');
+            pathnumber++;
 
-          toWrite += editedLine;
-          toWrite += "\n";
-          output.write(toWrite)
+            toWrite += editedLine;
+            toWrite += "\n";
+            output.write(toWrite)
     }
 
     })
+
+    console.log("Completed file modification. Review output at " + RETURNED_SVG_PATH + filename + '.svg');
 }
 
 
