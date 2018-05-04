@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0920c76b-9276-47c6-94a8-d016a9c43aae" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/brace-expansion/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/brace-expansion/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -69,8 +68,8 @@
         <entry file="file://$PROJECT_DIR$/node_modules/brace-expansion/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="352">
-                <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+              <first_editor relative-caret-position="186">
+                <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               </first_editor>
               <second_editor />
             </state>
@@ -160,12 +159,6 @@
             <path>
               <item name="GlassPatternBuilders" type="b2602c69:ProjectViewProjectNode" />
               <item name="GlassPatternBuilders" type="462c0819:PsiDirectoryNode" />
-              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="brace-expansion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GlassPatternBuilders" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GlassPatternBuilders" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -247,12 +240,12 @@
       <workItem from="1525465191220" duration="2309000" />
       <workItem from="1525467575040" duration="14000" />
       <workItem from="1525467605626" duration="2183000" />
-      <workItem from="1525469849690" duration="44000" />
+      <workItem from="1525469849690" duration="148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32853000" />
+    <option name="totallyTimeSpent" value="32957000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -677,8 +670,8 @@
     <entry file="file://$PROJECT_DIR$/node_modules/brace-expansion/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="352">
-            <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <first_editor relative-caret-position="186">
+            <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           </first_editor>
           <second_editor />
         </state>
