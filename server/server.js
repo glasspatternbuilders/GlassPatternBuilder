@@ -18,7 +18,7 @@ const SERVER_BASEFILEPATH =
     path.resolve(process.env.BASEFILEPATH || __dirname);
 const POTRACE_PATH = SERVER_BASEFILEPATH + '/potrace/';
 const PROJECT_BASEDIR = path.parse(SERVER_BASEFILEPATH).dir;
-const RETURNED_SVG_PATH = PROJECT_BASEDIR + '/resources/patterns/svg_display/';
+const RETURNED_SVG_PATH = PROJECT_BASEDIR + '/resources/svg_display/';
 
 
 
