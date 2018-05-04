@@ -10,12 +10,19 @@ const replace = require('replace-in-file');
 var svg = require('svg.js');
 var output;
 var readline = require('readline')
-// var lineReader = require('readline').createInterface({
-//     input: fs.createReadStream(_dirname + '/file')
-// });
 
-//var output = fs.createWriteStream(_dirname + '/output.txt');
 
+// DIRECTORY PATHS USED BY THE PROGRAM
+
+const SERVER_BASEFILEPATH =
+    path.resolve(process.env.BASEFILEPATH || __dirname);
+const POTRACE_PATH = SERVER_BASEFILEPATH + '/potrace/';
+const PROJECT_BASEDIR = path.parse(SERVER_BASEFILEPATH).dir;
+const RETURNED_SVG_PATH = PROJECT_BASEDIR + '/resources/patterns/svg_display/';
+
+
+
+// CREATING THE HTTP SERVER FOR RECEIVING INPUT FROM BROWSER
 
 http.createServer(function (req, res)  {
 
@@ -33,13 +40,21 @@ http.createServer(function (req, res)  {
             /* The file name of the uploaded file */
             var file_name = this.openedFiles[0].name;
             /* Location where we want to copy the uploaded file */
-            var new_location = './server/potrace/';
+           // var new_location = './potrace/';
+            var new_location = POTRACE_PATH;
 
             fs.copy(temp_path, new_location + file_name, function(err) {
                 if (err) {
                     console.error(err);
                 } else {
                     console.log("Saved bmp to file!");
+
+                    // Printing outpaths for debuggin
+                    // console.log(SERVER_BASEFILEPATH);
+                    // console.log(PROJECT_BASEDIR);
+                    // console.log(POTRACE_PATH);
+                    // console.log(RETURNED_SVG_PATH);
+
                     sendToPotrace(new_location + file_name);
                 }
             });
@@ -53,10 +68,10 @@ http.createServer(function (req, res)  {
 
 
 function sendToPotrace(file){
-    shell.exec('../../Potrace/potrace --svg --opaque ' + file);
+    shell.exec(POTRACE_PATH + 'potrace --svg --opaque ' + file);
     console.log("Converted bmp to svg!");
     var fileToRead = getFileName(file);
-    var inputPath = getFullPath(fileToRead);
+    var inputPath = POTRACE_PATH + fileToRead + '.svg';
 
     addIdToSvg(inputPath, fileToRead);
 }
@@ -88,7 +103,7 @@ function addIdToSvg(inputPath, filename){
 
 function modifySVGPath(inputPath, filename) {
     var fullPath = inputPath;
-    var dirname = './resources/patterns/svg_display/'
+    var dirname = RETURNED_SVG_PATH;
     var output = fs.createWriteStream(dirname + filename + '.svg');
     var lineReader = readline.createInterface({
         input: fs.createReadStream(fullPath)
@@ -120,32 +135,7 @@ function modifySVGPath(inputPath, filename) {
     }
 
     })
-
-
 }
-
-
-
-
-
-function getXML(inputPath){
-
-    fs.readFile(inputPath, 'utf-8', function (err, data){
-        if(err) console.log(err);
-        // we log out the readFile results
-        console.log(data);
-        // we then pass the data to our method here
-        parseString(data, function(err, result){
-            if(err) console.log(err);
-            // here we log the results of our xml string conversion
-            console.log(result);
-        });
-    });
-}
-
-
-
-
 
 
 // HELPER METHODS TO GET FILENAMES AND FILEPATHS
@@ -157,32 +147,46 @@ function getFileName(file){
     return name;
 }
 
-function getFullPath(file){
-    let filePath = './server/potrace/';
-    let fullFilePath = filePath + file + ".svg";
-    return fullFilePath;
-}
+
+
+
 
 
 
 // DO NOT USE THESE FUNCTIONS - FOR REFERENCE AND TESTING ONLY
 
-function readFile(file) {
-    let filePath = './server/potrace/';
-    let fullFilePath = filePath + file + ".svg";
-    fs.readFile(fullFilePath,"utf-8",function(err,contents){
-        if (err) error(err);
-        else {
-            processFile(contents);
-        }
-    });
-}
-
-function processFile(text) {
-   // var item = svg(text);
-    console.log(text);
-   // return item;
-    //text = text.toUpperCase();
-    //process.stdout.write(text);
-
-}
+// function readFile(file) {
+//     let filePath = './server/potrace/';
+//     let fullFilePath = filePath + file + ".svg";
+//     fs.readFile(fullFilePath,"utf-8",function(err,contents){
+//         if (err) error(err);
+//         else {
+//             processFile(contents);
+//         }
+//     });
+// }
+//
+// function processFile(text) {
+//    // var item = svg(text);
+//     console.log(text);
+//    // return item;
+//     //text = text.toUpperCase();
+//     //process.stdout.write(text);
+//
+// }
+//
+//
+// function getXML(inputPath){
+//
+//     fs.readFile(inputPath, 'utf-8', function (err, data){
+//         if(err) console.log(err);
+//         // we log out the readFile results
+//         console.log(data);
+//         // we then pass the data to our method here
+//         parseString(data, function(err, result){
+//             if(err) console.log(err);
+//             // here we log the results of our xml string conversion
+//             console.log(result);
+//         });
+//     });
+//}
