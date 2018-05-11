@@ -7,8 +7,8 @@
 The following **required** functionality is completed:
 
 * [X] User can upload a black and white pattern in bmp format.
-* [ ] The software application displays the uploaded pattern, which is in svg form and contains automatic numbering and arrows for each piece.  
-* [ ] User can select a piece.
+* [X] The software application displays the uploaded pattern. 
+* [X] User can select a pattern piece to edit.
 * [ ] User can apply color fill to a piece.
 * [ ] User can move the arrows to different directions.
 * [ ] User can resize the pattern. 

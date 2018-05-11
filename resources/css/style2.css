@@ -2,18 +2,24 @@
 
 html {
   font-size: 16px;
+  height: 100%;
 }
 
 body {
 	font-family: "Open Sans", sans-serif;
   background-color: white;
+  font: normal .80em trebuchet ms, sans-serif;
+  /*//background-image: url("chagall-window.jpg");*/
+  color: black;
+  font-weight: bold;
 }
 
 
 h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: black;
+  font: normal 165% 'century gothic', arial, sans-serif;
+  color: #B60000;
 }
 
 h3 {
@@ -33,11 +39,12 @@ img {
 
 nav {
  	grid-template: auto / 80% 20%;
-	color: gray;
+	background: snow;
 }
 
 nav div {
 	align-self: center;
+	color: white;
 }
 
 nav ul  {
@@ -51,21 +58,14 @@ nav ul li {
 
 nav a {
 	text-decoration: none;
-	color: gray;
-	padding: 0.5rem;
-}
-
-nav a:hover {
-	background-color: lightgray;
+	color: darkred;
+	padding: 1.5rem 2rem 4rem 1rem;
+	font-size: 20px;
 }
 
 
 /* Navigation - Brand  */
 
-nav img {
-	width:  50px;
-	height: 70px;
-}
 
 
 /* Media Query - Navigation */
@@ -81,11 +81,11 @@ nav img {
 
 	nav ul li {
 	 	justify-self: center;
-	 	padding: 0.3rem 0;
+	 	padding: 1.3rem;
 	}
 }
 
-/* Button-Primary */
+/* Button */
 
 .btn-primary {
   width: 11.4rem;
@@ -118,7 +118,7 @@ nav img {
 
 header {
   grid-template: auto / 100%;
-  height: 30rem;
+  height: 7rem;
   padding: 5rem 0;
   background-size: cover;
   background-position: center;
@@ -146,6 +146,7 @@ sepia() */
 
 .background-panel-1 {
   background-image: url("../images/chagall-window.jpg");
+  height: 400px;
 }
 
 header div {
@@ -283,7 +284,7 @@ header  p {
 }
 
 .process {
-  margin-bottom: 5.85rem;
+  margin-bottom: 1.85rem;
 }
 
 .process-1 {
@@ -333,43 +334,38 @@ header  p {
 
 
 /* Footer */
-footer strong {
-  display: inline-block;
-  margin-bottom: 1.4rem;
-  font-size: 2.5rem;
-  font-weight: bold;
+footer
+{
+background: snow;}
+
+
+ul
+{ margin: 20px 0 12px 17px;
 }
 
-footer p {
-  max-width: 42rem;
-  margin: auto;
-}
+ul li
+{ list-style-type: circle;
+  margin: 0 0 6px 0; 
+  padding: 0 0 4px 5px;}
 
-footer {
-  grid-template: 1fr 1fr 1fr / 100%;
-  grid-gap: 1rem 0;
-  padding: 5.2rem 2rem;
-  background-color: #f3f3f3;
-  text-align: center;
-  align-items: center;
-}
 
-footer a {
-  justify-self: center;
-  text-decoration: none;
-  color: white;
-}
+#site_content
+{ width: 758px;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  padding: 10px 10px 10px 10px;
+  background: linen ;
+  border: 15px solid #FFF;} 
 
-/* Footer Media Query  */
-@media only screen and (max-width: 767px) {
 
-  footer strong {
-    margin-bottom: 0rem;
-    font-size: 2rem;
-  }
+  
+.form_settings
+{ margin: 15px 0 0 0;}
 
-  footer {
-    padding: 1rem 2rem;
-    grid-gap: 0;
-  }
-}
+.form_settings p
+{ padding: 0 0 4px 0;}
+
+.form_settings span
+{ float: left; 
+  width: 200px; 
+  text-align: left;}

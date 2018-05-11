@@ -3,36 +3,32 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Glass Pattern Builder Web Application">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="CS 177 Spring 2018 class">
         <title>Glass Pattern Builders</title>
 
         <!-- Add Favicons Here -->
 
         <!-- Add Google Fonts Here -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Rammetto+One|Roboto:300,400" rel="stylesheet">
 
         <!-- Stylesheets -->
 
         <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
-        <link href="./cssreset/reset.css" type="text/css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet" >
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Rammetto+One|Roboto:300,400" rel="stylesheet">
-        <link href="style.css" type="text/css" rel="stylesheet">
         <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+        <link href="./resources/css/style2.css" type="text/css" rel="stylesheet">
+        <link href="./resources/css/upload.css" type="text/css" rel="stylesheet">
+        <link href="./resources/css/editimage.css" type="text/css" rel="stylesheet">
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
     </head>
 
    <body>
       <!-- Navigation Section -->
 
-      <nav class="grid-container">
-      	<div>
-          <ul class="grid-container">
-             <li><a href="index.html">Home</a></li>
-             <li><a href="patterns.html">Patterns</a></li>
-             <li><a href="about.html">About</a></li>
-          </ul>
-          </div>
-          <div><img src="../logo/home.png"></div>
-      </nav>
 
       <!-- Header Section -->
 
@@ -41,42 +37,7 @@
           <h1>Glass Pattern Builders</h1>
           <p>Create patterns for your next stained glass project</p>
         </div>
-        <div class="btn-primary">
-          <a href="patterns.html">Get started</a>
-        </div>
       </header>
-
-<!-- Featured Project -->
-
-    <div class="featured-project grid-container">
-      <div class="featured-proj-img">
-        <h2>Featured project</h2>
-        <div class="image-container">
-          <img src="./resources/images/butterfly-1.jpg" alt="photo of stained glass butterfly">
-        </div>
-      </div>
-      <div class="featured-proj">
-        <h3>Butterfly</h3>
-        <p>(shown left) by [name of artist]</p>
-        <p>Glass Pattern Builders helps stained glass artists
-          focus on their artistic decisions,
-          and reduces error and hassle
-          associated with making patterns manually.</p>
-      </div>
-      <div class="categories">
-          <a href="patterns.html">
-        <h3>Pattern Library</h3>
-        <ul>
-          <li>Animals</li>
-          <li>Flowers</li>
-          <li>Landscape</li>
-          <li>People</li>
-          <li>Shapes</li>
-          <li>Trees</li>
-        </ul>
-          </a>
-      </div>
-    </div>
 
     <!-- Process / How It Works -->
    <div class="process-header">
@@ -85,41 +46,96 @@
    <div class="processes grid-container">
       <div class="process process-1">
         <div class="icon-container">
-          <a href="#"><img src="./resources/icons/upload_icon.png" alt=""></a>
+          <a href="#"><img src="./resources/icons/upload_icon2.png" alt=""></a>
         </div>
         <h3>Upload</h3>
         <p>Just take a picture with your phone.</p>
       </div>
       <div class="process process-2">
         <div class="icon-container">
-          <a href="#"><img src="./resources/icons/edit_icon.png" alt=""></a>
+          <a href="#"><img src="./resources/icons/edit_icon2.png" alt=""></a>
         </div>
         <h3>Modify</h3>
         <p>Add color and texture. Try out different styles and preview results.</p>
       </div>
       <div class="process process-3">
         <div class="icon-container">
-          <a href="#"><img src="./resources/icons/resize_icon.png" alt=""></a>
+          <a href="#"><img src="./resources/icons/resize_icon2.png" alt=""></a>
         </div>
         <h3>Resize & Print</h3>
         <p>Size the piece to your dimensions and get pattern printed.</p>
       </div>
   </div>
 
-  <!-- Footer -->
+      <div id="drop-area">
+          <form class="my-form">
+              <h2>Drag and drop (or upload) your files below!</h2>
+              <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+              <label class="button" for="fileElem">Select some files</label>
+          </form>
+
+          <div id="gallery"></div>
+
+      </div>
+
+
+      <! -- Container for selected image -->
+      <!-- The expanding image container -->
+      <div class="container">
+
+          <!-- Edit color -->
+          <div id="edit-color" class="btn-primary">
+              <a>Edit color</a>
+          </div>
+
+          <!-- Close the image -->
+          <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+          <!-- Expanded image -->
+          <object id="expandedImg" type="image/svg+xml" width="100%"></object>
+
+          <!--<img id="expandedImg" style="width:100%">-->
+
+          <!-- Image text -->
+          <div id="imgtext"></div>
+
+          <!-- Send to print -->
+          <div id="print" class="btn-primary">
+              <a>Send for printing</a>
+          </div>
+
+      </div>
+
+
+
+      <!-- Library of Images already handled by Potrace and Numbered  -->
+
+      <div id="library">
+          <form class="my-form">
+              <h2>Or select patterns from the library below</h2>
+              <img src="./resources/library/bird.svg" id="bird" alt="Bird" onclick="openImg(this);">
+              <img src="./resources/library/butterfly.svg" alt="Butterfly" onclick="openImg(this);">
+              <img src="./resources/library/dolphin.svg" alt="Dolphin" onclick="openImg(this);">
+              <img src="./resources/library/dragonfly.svg" alt="Dragonfly" onclick="openImg(this);">
+              <img src="./resources/library/pattern.svg" alt="Geometric" onclick="openImg(this);">
+              <img src="./resources/library/lighthouse.svg" alt="Lighthouse" onclick="openImg(this);">
+              <img src="./resources/library/tree.svg" alt="Tree" onclick="openImg(this);">
+          </form>
+      </div>
+
+
+      <!-- Footer -->
 
   <footer class="grid-container">
     <strong>Get started on your next project</strong>
       <p>Make the perfect piece with the help of our smart pattern builder.</p>
-      <a href="patterns.html" class="btn-primary">Upload pattern</a>
+      <a href="#drop-area" class="btn-primary">Upload pattern</a>
   </footer>
 
-
-
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.4/svg.min.js" integrity="sha256-c41axQEd+/UIEXHKMkvkD0bDuKHCdlBd+13pZLCvsro=" crossorigin="anonymous"></script>
       <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-      <script src="./resources/js/main.js"></script>
+      <script src="./resources/js/upload.js"></script>
 
     </body>
 
